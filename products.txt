@@ -1,0 +1,3 @@
+APPLE | 56
+bANANA | 80
+Orange | 68
