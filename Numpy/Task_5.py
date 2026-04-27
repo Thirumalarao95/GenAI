@@ -1,0 +1,16 @@
+import numpy as np
+marks = np.array([78,85,90,66,72,88,95,60])
+mean = np.mean(marks)
+median = np.median(marks)
+std_dev = np.std(marks)
+variance = np.var(marks)
+min = np.min(marks)
+max = np.max(marks)
+range_value = max - min
+print("Mean:", mean)
+print("Median:", median)
+print("Standard Deviation:", std_dev)
+print("Variance:", variance)
+print("Minimum:", min)
+print("Maximum:", max)
+print("Range:", range_value)

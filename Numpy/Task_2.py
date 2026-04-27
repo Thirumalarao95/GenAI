@@ -1,0 +1,10 @@
+import numpy as np
+A = np.array([10,20,30,40])
+B = np.array([1,2,3,4])
+print(type(A))
+print(type(B))
+print("Addition od A,B is:", A+B)
+print("Subtraction of A,B is:", A-B)
+print("Multiplication of A,B is:", A*B)
+print("Division of A,B is:", A/B)
+print("Sqare of A is:",A**2)
