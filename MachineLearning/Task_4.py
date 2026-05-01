@@ -8,7 +8,7 @@ movies_data = pd.DataFrame()
 for i in range(1,101):
     print("Loop_Counter:", i)
     #web url & headers for the API request
-    url = f"https://api.themoviedb.org/3/movie/changes?api_key=1896085a376ce7dc6fefb17566d03e9&page={i}".format(i)
+    url = f"https://api.themoviedb.org/3/movie/popular?api_key=1896085a376ce7dcc6febb17566d03e9&language=en-US&page={i}".format(i)
 
     headers = {
         "accept": "application/json",
@@ -24,7 +24,16 @@ for i in range(1,101):
     # now I am concatenating the data from all pages into a single DataFrame
     movies_data = pd.concat([movies_data, page_data], ignore_index=False)
 
+url = "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1"
 
+headers = {
+    "accept": "application/json",
+    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxODk2MDg1YTM3NmNlN2RjYzZmZWJiMTc1NjZkMDNlOSIsIm5iZiI6MTc3NzQzMjczNi4wMTcsInN1YiI6IjY5ZjE3OGEwODRjNGVhNGI1N2JjYjVlOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.9_S9Hh4oVC0vv6BQErDanwJgYz7aCNn2_5a8aCkkaFs"
+}
+
+response = requests.get(url, headers=headers)
+
+print(response.text)
 # printing the DataFrame
 print(movies_data)
 # saving the DataFrame into a CSV file
