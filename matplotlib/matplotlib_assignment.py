@@ -15,14 +15,14 @@ print(sales_data.columns)
 #Plotting the scatter plot for Mobiles sold over the years
 plt.plot(sales_data['Years'], sales_data['Mobiles'], color='red')
 plt.title("Sales Trends Over Time")
-plt.xlabel("Mobiles Sold")
-plt.ylabel("Laptops Sold")
+plt.xlabel("Years")
+plt.ylabel("Mobiles Sold")
 plt.show()
 
 #Plotting the scatter plot for Laptops sold over the years
 plt.plot(sales_data['Years'], sales_data['Laptops'], color='blue')
 plt.title("Sales Trends Over Time")
-plt.xlabel("Mobiles Sold")
+plt.xlabel("Years")
 plt.ylabel("Laptops Sold")
 plt.show()
 
@@ -44,9 +44,9 @@ plt.ylabel('Mobiles')
 plt.title('Mobiles Sales by Year')
 plt.show()
 #Creating a horizontal bar chart of laptops and Mobiles columns.
-plt.barh(sales_data['Laptops'], sales_data['Mobiles'], color='red')
+plt.barh(sales_data['Years'], sales_data['Mobiles'], color='red')
 
-plt.xlabel('Laptops')
+plt.xlabel('Years')
 plt.ylabel('Mobiles')
 plt.title('Horizontal Laptops Vs Mobiles')
 plt.show()
@@ -80,20 +80,20 @@ plt.show()
 
 # Task-6
 
-marks = sales_data['Years']  # replace with your numeric column
+marks = sales_data['Mobiles'] 
 
 plt.figure()
-plt.hist(marks, bins=10,color='red', edgecolor='black')
-plt.title("Years Distribution")
-plt.xlabel("Years")
+plt.hist(marks, bins=5,color='red', edgecolor='black')
+plt.title("Distribution of Mobiles")
+plt.xlabel("Mobiles")
 plt.ylabel("Frequency")
 plt.show()
 
 # Task-7
 
-Mobile = sales_data['Mobiles'].value_counts()
+mobile = sales_data['Mobiles'].sum()
+laptop = sales_data['Laptops'].sum()
 
-plt.figure()
-plt.pie(Mobile, labels=Mobile.index, autopct='%1.1f%%')
-plt.title("Market Share")
+plt.pie([mobile, laptop], labels=['Mobiles', 'Laptops'], autopct='%1.1f%%')
+plt.title("Market Share of Mobiles and Laptops Sales")
 plt.show()

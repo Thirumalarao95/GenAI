@@ -12,13 +12,13 @@ print(sales_data.columns)
 #Plotting the scatter plot for Mobiles sold over the years
 plt.plot(sales_data['Years'], sales_data['Mobiles'], color='red')
 plt.title("Sales Trends Over Time")
-plt.xlabel("Mobiles Sold")
-plt.ylabel("Laptops Sold")
+plt.xlabel("Years")
+plt.ylabel("Mobiles Sold")
 plt.show()
 
 #Plotting the scatter plot for Laptops sold over the years
 plt.plot(sales_data['Years'], sales_data['Laptops'], color='blue')
 plt.title("Sales Trends Over Time")
-plt.xlabel("Mobiles Sold")
+plt.xlabel("Years")
 plt.ylabel("Laptops Sold")
 plt.show()

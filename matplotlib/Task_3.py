@@ -16,6 +16,5 @@ plt.barh(sales_data['Years'], sales_data['Mobiles'], color='red')
 
 plt.xlabel('Years')
 plt.ylabel('Mobiles')
-plt.title('Horizontal Laptops Vs Mobiles')#sales_data.plot(kind='bar', x='Cost', y='Profit', color='red')
-#sales_data['Revenue'].plot(kind='bar', stacked=True)
+plt.title('Horizontal Laptops Vs Mobiles')
 plt.show()
